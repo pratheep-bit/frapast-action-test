@@ -1,0 +1,13 @@
+{
+  "doctype": "DocType",
+  "name": "Leave Request",
+  "module": "Custom App",
+  "is_submittable": 1,
+  "fields": [
+    {
+      "fieldname": "employee",
+      "fieldtype": "Link",
+      "options": "Employee"
+    }
+  ]
+}
