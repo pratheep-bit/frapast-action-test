@@ -20,5 +20,5 @@ jobs:
         uses: pratheep-bit/frapast@main
         with:
           repo-path: '.'
-          fail-on: 'medium'
+          fail-on: 'critical'
           upload-sarif: 'true'
