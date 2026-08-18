@@ -1,0 +1,24 @@
+name: frapAST Action Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  frapast-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run frapAST Composite Action
+        uses: pratheep-bit/frapast@main
+        with:
+          repo-path: '.'
+          fail-on: 'medium'
+          upload-sarif: 'true'
